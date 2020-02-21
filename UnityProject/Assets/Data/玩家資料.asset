@@ -15,5 +15,6 @@ MonoBehaviour:
   hp: 200
   hpMax: 200
   cd: 0.5
-  power: 700
-  attack: 5000
+  power: 1000
+  attack: 20
+  speed: 20

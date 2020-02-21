@@ -3,8 +3,6 @@ using System.Linq;      // 引用 查詢語法 API
 
 public class Player : MonoBehaviour
 {
-    [Header("移動速度"), Range(1, 300)]
-    public float speed = 10;
     [Header("玩家資料")]
     public PlayerData data;
     [Header("武器")]
@@ -55,7 +53,7 @@ public class Player : MonoBehaviour
         float v = joystick.Vertical;                // 垂直
         float h = joystick.Horizontal;              // 水平
 
-        rig.AddForce(-h * speed, 0, -v * speed);    // 推力(-水平，0，-垂直)
+        rig.AddForce(-h * data.speed, 0, -v * data.speed);    // 推力(-水平，0，-垂直)
 
         ani.SetBool("跑步開關", v != 0 || h != 0);  // 動畫控制器.設定布林值("參數"，垂直不等於 0 或者 水平不等於 0)
 
